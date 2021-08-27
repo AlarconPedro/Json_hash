@@ -49,6 +49,7 @@ public class BuscaDadosWeb extends AsyncTask< String, Void, ArrayList<Emissora>>
                     emissora.codigo = jo.getInt("Emi_Codigo");
                     emissora.nome   = jo.getString("Emi_Nome");
                     emissora.logo   = jo.getString("Emi_Logo");
+                    emissora.logo = emissora.logo.replace("~/", "http://controle.mdvsistemas.com.br/");
 
                     listaRetorno.add(emissora);
                 }
